@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+/* eslint-disable no-var, vars-on-top */
+process.title = 'forklift';
+
+var cli = require('../lib/cli');
+cli.runTask(process.argv[2]);
+/* eslint-enable no-var, vars-on-top */
