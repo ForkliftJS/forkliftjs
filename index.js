@@ -1,11 +1,10 @@
 function readProjectConfig(config) {
   var path = require('path');
   var cwd = process.cwd();
-
   var configFilePath = path.join(cwd, 'forklift.conf.js');
-
   var configFile = require(configFilePath);
-  return config;
+  
+  return configFile;
 }
 
 module.exports.readProjectConfig = readProjectConfig;
