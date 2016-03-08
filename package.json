@@ -1,6 +1,6 @@
 {
   "name": "forkliftjs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "An attempt to establish standards for a way of working with modern front end tools",
   "keywords": [],
   "dependencies": {
@@ -13,7 +13,7 @@
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.2",
+    "eslint-config-forkliftjs": "0.x.x",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.1.0",
