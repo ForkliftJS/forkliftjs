@@ -1,6 +1,6 @@
 {
   "name": "forkliftjs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "An attempt to establish standards for a way of working with modern front end tools",
   "keywords": [],
   "dependencies": {
@@ -45,12 +45,9 @@
     "yuidocjs": "^0.10.0"
   },
   "main": "index.js",
-  "bin": {
-    "forklift": "./bin/forklift"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nvanmmeurs/tooling.git"
+    "url": "git+https://github.com/forkliftjs/forkliftjs.git"
   },
   "author": "Nicky van Meurs <nicky.van.meurs@just-bi.nl>",
   "license": "MIT"
