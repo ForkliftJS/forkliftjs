@@ -3,6 +3,8 @@
 [![npm version](https://badge.fury.io/js/forkliftjs.svg)](https://badge.fury.io/js/forkliftjs)
 
 ## Usage instructions
+
+[![Join the chat at https://gitter.im/ForkliftJS/forkliftjs](https://badges.gitter.im/ForkliftJS/forkliftjs.svg)](https://gitter.im/ForkliftJS/forkliftjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 * Install ForkliftJS locally into your project `npm install --save-dev forkliftjs`
 * Run any of the commands (see: https://github.com/ForkliftJS/docs)
 
