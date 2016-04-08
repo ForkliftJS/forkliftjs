@@ -1,6 +1,4 @@
 var path = require('path');
-var shell = require('shelljs');
-
 var project = process.cwd();
 var source = path.join(project, 'src');
 var vendor = path.join(source, 'vendor');
@@ -15,22 +13,7 @@ var bin = path.join(forklift, 'bin');
 var lib = path.join(forklift, 'lib');
 var tasks = path.join(lib, 'tasks');
 
-function execModule(moduleName, args) {
-  var modulePath = path.join(modulesBin, moduleName);
-  var command = [modulePath, args].join(' ');
-  shell.exec(command, { silent: false });
-}
-
-function getConfigPath(configFileName) {
-  return path.join(forklift, configFileName);
-}
-
-function getTaskPath(taskName) {
-  return path.join(tasks, taskName);
-}
-
 module.exports = {};
-
 module.exports.paths = {};
 module.exports.paths.project = project;
 module.exports.paths.modules = modules;
@@ -45,8 +28,3 @@ module.exports.paths.forklift = forklift;
 module.exports.paths.bin = bin;
 module.exports.paths.lib = lib;
 module.exports.paths.tasks = tasks;
-
-module.exports.utils = {};
-module.exports.utils.execModule = execModule;
-module.exports.utils.getConfigPath = getConfigPath;
-module.exports.utils.getTaskPath = getTaskPath;

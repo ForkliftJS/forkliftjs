@@ -14,9 +14,15 @@ var vendorPath = paths.vendor;
 var bowerPath = paths.bower; // eslint-disable-line no-unused-vars
 var distPath = paths.dist;
 
+var aliases = {};
+Object.keys(projectConfig.vendorAliases).forEach(function (alias) {
+  var path = projectConfig.vendorAliases[alias];
+  aliases[alias] = path.resolve(sourcepath, path);
+});
+
 var config = {
   eslint: {
-    configFile: path.join(paths.forklift, '.eslintrc')
+    configFile: path.join(paths.project, '.eslintrc')
   },
 
   // Entrypoints (Usually one single entrypoint).
@@ -41,9 +47,7 @@ var config = {
     // Add aliases for (bower) modules here.
     // NOTE: IT IS PREFERABLE TO USE NPM OVER BOWER AND ALWAYS USE UNMINIFIED
     //       FILES!
-    alias: projectConfig.vendorAliases.map(function(vendorAlias) {
-      return path.resolve(sourcepath, vendorAlias);
-    }),
+    alias: aliases,
     // alias: {
     //   // EXAMPLE:
     //   //   jquery: path.join(bowerPath, 'jquery', 'dist', 'jquery.js'),
@@ -93,7 +97,7 @@ var config = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) { // eslint-disable-line babel/object-shorthand, no-unused-vars, object-shorthand, max-len
-        return module.resource && module.resource.indexOf(path.resolve(__dirname, 'src')) === -1;
+        return module.resource && module.resource.indexOf(paths.source) === -1;
       }
     }),
 

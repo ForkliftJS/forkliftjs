@@ -1,10 +1,10 @@
 {
   "name": "forkliftjs",
-  "version": "0.1.8",
+  "version": "0.1.14",
   "description": "An attempt to establish standards for a way of working with modern front end tools",
   "keywords": [],
   "dependencies": {
-    "babel-core": "^6.5.2",
+    "babel-core": "^6.7.3",
     "babel-eslint": "^5.0.0",
     "babel-loader": "^6.2.3",
     "babel-preset-es2015": "^6.5.0",
