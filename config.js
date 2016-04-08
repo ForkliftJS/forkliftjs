@@ -1,9 +1,11 @@
 var path = require('path');
 var project = process.cwd();
-var source = path.join(project, 'src');
+var projectConfigPath = path.join(project, 'forklift.conf.js');
+var projectConfig = require(projectConfigPath);
+var source = path.join(project, projectConfig.sourceFolder || 'src');
 var vendor = path.join(source, 'vendor');
 var bower = path.join(vendor, 'bower');
-var dist = path.join(project, 'dist');
+var dist = path.join(project, projectConfig.distributionFolder || 'dist');
 var docs = path.join(project, 'docs');
 var generatedDocs = path.join(project, 'docs', 'api');
 var modules = path.join(project, 'node_modules');
@@ -14,8 +16,10 @@ var lib = path.join(forklift, 'lib');
 var tasks = path.join(lib, 'tasks');
 
 module.exports = {};
+module.exports.projectConfig = projectConfig;
 module.exports.paths = {};
 module.exports.paths.project = project;
+module.exports.paths.projectConfigPath = projectConfigPath;
 module.exports.paths.modules = modules;
 module.exports.paths.modulesBin = modulesBin;
 module.exports.paths.source = source;
