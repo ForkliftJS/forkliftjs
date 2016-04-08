@@ -132,20 +132,20 @@ var config = {
 
       // Compile and load SASS/SCSS as CSS.
       {
-        test: /\.s(c|a)ss$/,
-        loaders: ExtractTextPlugin.extract('style', 'css', 'sass')
+        test: /\.(scss|sass)$/,
+        loaders: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
       },
 
       // Compile and load LESS as CSS.
       {
         test: /\.less$/,
-        loaders: ExtractTextPlugin.extract('style', 'css', 'less')
+        loaders: ExtractTextPlugin.extract('style', 'css?sourceMap!less?sourceMap')
       },
 
       // Compile and load Stylus as CSS.
       {
         test: /\.styl$/,
-        loaders: ExtractTextPlugin.extract('style', 'css', 'stylus')
+        loaders: ExtractTextPlugin.extract('style', 'css?sourceMap!stylus?sourceMap')
       },
 
       // Load HTML files.
