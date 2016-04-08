@@ -107,14 +107,14 @@ var config = {
 
   module: {
 
-    preLoaders: [
+    // preLoaders: [
       // Lint scripts using ESLint.
-      {
-        test: /\.(js|jsx|es6)$/,
-        loaders: ['eslint'],
-        exclude: /(node_modules|vendor|bower)/
-      }
-    ],
+      // {
+        // test: /\.(js|jsx|es6)$/,
+        // loaders: ['eslint'],
+        // exclude: /(node_modules|vendor|bower)/
+      // }
+    // ],
 
     loaders: [
       // Load and compile JavaScript.
