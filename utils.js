@@ -8,15 +8,10 @@ function execModule(moduleName, args) {
   shell.exec(command, { silent: false });
 }
 
-function getConfigPath(configFileName) {
-  return path.join(paths.forklift, configFileName);
-}
-
 function getTaskPath(taskName) {
   return path.join(paths.tasks, taskName);
 }
 
 module.exports = {};
 module.exports.execModule = execModule;
-module.exports.getConfigPath = getConfigPath;
 module.exports.getTaskPath = getTaskPath;
