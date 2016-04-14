@@ -44,6 +44,9 @@
     "webpack-dev-server": "^1.14.1",
     "yuidocjs": "^0.10.0"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
