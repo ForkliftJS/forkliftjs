@@ -104,7 +104,11 @@ var config = {
     // Extract all stylesheets to their own bundle called styles.css.
     new ExtractTextPlugin('styles.bundle.css')
   ],
-
+  resolveLoader: {
+    alias: {
+        'static': 'file-loader?name=[path][name].[ext]&context=' + paths.source,
+    }
+  },
   module: {
 
     // preLoaders: [
@@ -154,11 +158,13 @@ var config = {
         loaders: ['html']
       },
 
-      // Load JSON files.
-      {
-        test: /\.json$/,
-        loaders: ['json']
-      },
+      // Load JSON files as module.
+      // Automatic loading of json files has been disabled.
+      // use: `import 'json!./file.json';` instead
+      // {
+      //   test: /\.json$/,
+      //   loaders: ['json']
+      // },
 
       // Load images (inline base64 URLs for files <= 8kb).
       {
