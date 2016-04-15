@@ -27,6 +27,8 @@ var config = {
 
   // Entrypoints (Usually one single entrypoint).
   entry: [
+    // Babel polyfills.
+    'babel-polyfill',
 
     // Main module.
     path.join(sourcePath, 'main')
